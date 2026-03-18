@@ -1,0 +1,7 @@
+fn main() {
+	let a: int = 2 + 3; // inline comment
+	let c: int = 5 - 1; /* block comment */
+	putc(72);
+	putc(73);
+	putc(10);
+}
