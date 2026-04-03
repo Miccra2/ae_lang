@@ -103,7 +103,7 @@ Token generate_token(Lexer *lexer) {
 	}
 	TokenKind kind = TOKEN_UNDEFINED;
 	if (is_str(lexer, 0, "=")) {
-		kind = TOKEN_EQUALS;
+		kind = TOKEN_EQUAL;
 	} else if (is_str(lexer, 0, "+")) {
 		kind = TOKEN_PLUS;
 	} else if (is_str(lexer, 0, "-")) {

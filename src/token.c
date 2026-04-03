@@ -42,3 +42,12 @@ size_t position_column(Position position) {
 Token new_token(TokenKind kind, Position position) {
 	return (Token){.kind=kind, .position=position};
 }
+
+size_t token_priority(TokenKind kind) {
+	switch (kind) {
+	case TOKEN_ASTERISK: case TOKEN_SLASH: return 1;
+	case TOKEN_PLUS:     case TOKEN_MINUS: return 2;
+	case TOKEN_EQUAL:					   return 3;
+	default: 						       return 0;
+	}
+}

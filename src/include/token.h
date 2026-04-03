@@ -22,7 +22,7 @@ typedef enum TokenKind {
 	TOKEN_EOF,				// internal
 	TOKEN_IDENTIFIER,		// "[_A-Za-z][_A-Za-z0-9]*"
 	TOKEN_INTEGER_LITERAL,	// "[0-9]"
-	TOKEN_EQUALS,			// "="
+	TOKEN_EQUAL,			// "="
 	TOKEN_PLUS,				// "+"
 	TOKEN_MINUS,			// "-"
 	TOKEN_ASTERISK,			// "*"
@@ -60,5 +60,6 @@ Position new_position(char *begin, char *end, char *offset, size_t line);
 size_t position_length(Position position);
 size_t position_column(Position position);
 Token new_token(TokenKind kind, Position position);
+size_t token_priority(TokenKind kind);
 
 #endif // __TOKEN_H__
